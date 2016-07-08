@@ -5,6 +5,13 @@ describe(Word) do
   before() do
     Word.clear()
   end
+  describe('#the_word_itself') do
+    it('returns the word itself') do
+      test_word = Word.new('beholden')
+      expect(test_word.the_word_itself()).to(eq('beholden'))
+    end
+  end
+
   describe('#definitions') do
     it('returns an array of all definitions') do
       test_word = Word.new('beholden')
