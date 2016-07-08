@@ -1,11 +1,11 @@
-<h1>The Ruby Dictionary</h1>
-<h3>Brought to you by Sinatra</h3>
 
-<p>A list of our most recent words:</p>
+<h3>A list of our most recent words:</h3>
 
 <ul>
   <% @words.each() do |word| %>
-    <li> <a href="/words/<%= word.id %>"><%= word.the_word_itself() %></a></li>
+  <p class="eachWord">
+    <a href="/words/<%= word.id %>"><%= word.the_word_itself() %></a>
+  </p>
   <% end %>
 </ul>
 

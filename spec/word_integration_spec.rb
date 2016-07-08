@@ -17,6 +17,5 @@ describe('the index path', {:type => :feature}) do
     fill_in('new_definition', :with =>'to owe a duty to')
     click_button('Submit this new definition')
     expect(page).to have_content('to owe a duty to')
-
   end
 end
