@@ -1,0 +1,13 @@
+<h2><%= @word.the_word_itself() %></h2>
+
+<% if @word.definitions().length > 0 %>
+  <% @word.definitions().each() do |definition| %>
+    <p>
+      <%= definition.the_definition_itself() %>
+    </p>
+  <% end %>
+<% else %>
+    <p>
+      No definitions, please add one!
+    </p>
+<% end %>

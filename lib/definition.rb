@@ -5,7 +5,4 @@ class Definition
   def initialize(the_definition_itself)
     @the_definition_itself = the_definition_itself
   end
-
-
-
 end

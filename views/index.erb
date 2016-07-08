@@ -5,15 +5,18 @@
 
 <ul>
   <% @words.each() do |word| %>
-    <li><%= word.the_word_itself() %></li>
+    <li> <a href="/words/<%= word.id %>"><%= word.the_word_itself() %></a></li>
   <% end %>
 </ul>
 
-<p>Create a new task:</p>
+<p>Create a new entry:</p>
 
 <form action="/words" method="post">
-  <label for="description">Task Description</label>
-  <input id="description" name="description" type="text">
+  <label for="word">Word</label><br>
+  <input id="word" name="word" type="text"><br>
 
-  <button type="submit">Add task</button>
+  <label for="definition">Definition</label><br>
+  <input id="definition" name="definition" type="text"><br>
+
+  <button type="submit">Add this entry</button>
 </form>

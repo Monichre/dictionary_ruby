@@ -52,4 +52,14 @@ describe(Word) do
       expect(Word.all()).to(eq([]))
     end
   end
+
+  describe('.find') do
+    it('returns a word by its unique id') do
+      test_word = Word.new('beholden')
+      test_word.save()
+      test_word2 = Word.new('soliloquoy')
+      test_word2.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
+    end
+  end
 end
