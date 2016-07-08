@@ -13,6 +13,13 @@ describe(Word) do
     end
   end
 
+  describe('#id') do
+    it('returns an array of all definitions') do
+      test_word = Word.new('perfunctory')
+      expect(test_word.id()).to(eq(1))
+    end
+  end
+
   describe('.all') do
     it('returns an array of all words') do
       test_word = Word.new('beholden')
