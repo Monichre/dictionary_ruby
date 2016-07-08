@@ -11,3 +11,9 @@
       No definitions, please add one!
     </p>
 <% end %>
+<form action="/words/<%=@word.id() %>/new" method="post">
+  <label for="new_definition">New Definition</label><br>
+  <input id="new_definition" name="new_definition" type="text"><br>
+
+  <button type="submit">Submit this new definition</button>
+</form>
