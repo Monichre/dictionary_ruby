@@ -14,5 +14,9 @@ describe('the index path', {:type => :feature}) do
     expect(page).to have_content('beholden')
     click_link('beholden')
     expect(page).to have_content('to owe thanks')
+    fill_in('new_definition', :with =>'to owe a duty to')
+    click_button('Submit this new definition')
+    expect(page).to have_content('to owe a duty to')
+
   end
 end
