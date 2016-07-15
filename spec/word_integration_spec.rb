@@ -10,7 +10,10 @@ describe('the index path', {:type => :feature}) do
     fill_in('definition', :with =>'to owe thanks')
     click_button('Add this entry')
     expect(page).to have_content('Thank you! Your entry is being processed')
-    click_link('Home')
+  end
+
+  it "displays word entries as  active links" do
+    visit('/')
     expect(page).to have_content('beholden')
     click_link('beholden')
     expect(page).to have_content('to owe thanks')
