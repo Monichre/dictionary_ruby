@@ -14,9 +14,19 @@ describe(Word) do
 
   describe('#definitions') do
     it('returns an array of all definitions') do
-      test_word = Word.new('beholden')
-      test_word.add_definition('owing thanks')
-      expect(test_word.definitions()).to(eq(['owing thanks']))
+      test_def = Definition.new("old, ancient, obscure")
+      archaic = Word.new('archaic')
+      archaic.add_definition(test_def)
+      expect(archaic.definitions()).to(eq([test_def]))
+    end
+  end
+
+  describe('#add_definition') do
+    it "adds a definition object to the array of definitions" do
+      test_def = Definition.new("old, ancient, obscure")
+      archaic = Word.new('archaic')
+      archaic.add_definition(test_def)
+      expect(archaic.definitions()).to(eq([test_def]))
     end
   end
 
